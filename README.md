@@ -4,3 +4,13 @@ Instruction Set Architecture (ISA): The processor fully supports the MIPS instru
 - R-Type Instructions: Arithmetic and logical operations that involve registers, such as add, sub, and, or, mul.
 - I-Type Instructions: Operations with immediate values, memory access instructions like lw , sw, beq, andi, ori, addi.
 - J-Type Instructions: Unconditional jump instructions such as j.
+
+Multicycle Operation:
+- Instruction Fetch: The instruction is fetched from memory.
+- Instruction Decode/Register Fetch: The instruction is decoded, and operands are fetched from the register file.
+- Execution/Effective Address Calculation: The ALU performs the required computation or calculates the effective address for memory operations.
+- Memory Access/Branch Completion: Data memory is accessed for load/store instructions, or the branch target address is computed.
+- Write-Back: The result of an operation is written back to the register file.
+
+Optimized Hardware Utilization:
+- By spreading the execution of an instruction over multiple cycles, the processor reuses functional units, reducing hardware complexity.
